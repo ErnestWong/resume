@@ -1,0 +1,226 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Ernest}{Wong}{ \urlstyle{same}\url{http://ernest-wong.me} \\
+\href{mailto:e56wong@uwaterloo.ca}{e56wong@uwaterloo.ca}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Programming}
+% \subsection{Programming}
+% \descript{Proficient:}
+JavaScript (Backbone, AngularJS) \\
+Ruby (Ruby on Rails) \\
+Python (Django) \\
+Java (Android) \\
+C/C++ \textbullet{} C\# \\
+HTML/CSS \textbullet{} SQL \\
+
+% C++ \textbullet{} C\# \textbullet{} Java \\
+% % \vspace{\topsep}
+% \descript{Familiar:}
+% PHP \textbullet{} mySQL \\
+% Android \textbullet{} C \textbullet{} ARM Assembly \\
+% \vspace{5em}
+\section{Technologies}
+git \textbullet{} vim \textbullet{} bash \\
+OS X \textbullet{} linux \\
+openCV \textbullet{} tesseract \\
+\sectionsep
+
+\section{Software Practices}
+agile \textbullet{} pair-programming \\
+scrum \textbullet{} TDD \textbullet{} MVC \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{University of Waterloo}
+\descript{Computer Engineering}
+\location{2013 - 2018 | Waterloo, ON}
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Contact
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Contact}
+\href{e56wong@uwaterloo.ca}{\bf e56wong@uwaterloo.ca} \\
+\href{http://ernest-wong.me}{\bf http://ernest-wong.me} \\
+\href{https://github.com/ernestwong}{\bf github.com/ernestwong} \\
+\href{https://www.linkedin.com/in/ewong222}{\bf linkedin.com/in/ewong222} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK :')
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Coursework}
+
+% \descript{Indoor Positioning System}
+% \vspace{\topsep}
+% \begin{tightemize}\itemsep0.2em
+% \item Android app - calculates shortest path between two points in a room.
+% \item Provides step-by-step directions and real-time position updates as you walk.
+% \end{tightemize}
+% \sectionsep
+
+% \descript{ARM Reaction Timer}
+% \begin{tightemize}\itemsep0.2em
+% \item Reaction timer game written for a Cortex-M3 board in ARM Assembly using the Thumb2 instruction set.
+% \end{tightemize}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.66\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Inkling}
+\descript{| Software Engineering Intern}
+\location{Aug 2015 – Present | San Francisco, CA}
+\vspace{\topsep}
+\begin{tightemize}\itemsep0.2em
+\item Developing Inkling's consumer digital content web reader, built in Backbone and Django.
+\item Improved web reader custom word-highlighting algorithm
+\end{tightemize}
+
+
+\runsubsection{Boltmade}
+\descript{| Full Stack Developer }
+\location{Jan 2015 – May 2015 | Waterloo, ON}
+\begin{tightemize}\itemsep0.2em
+\item Built multiple entire web applications with Ruby on Rails and AngularJS that were shipped to production.
+\item Developed both large scale applications and small-scale web applications from ground-up.
+\item Contributed to weekly sprint planning meetings with clients and discussed design implementations.
+\end{tightemize}
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{SudokuSolver}
+\descript{| Sudoku Puzzle OCR Cam Solver}
+\location{\href{http://github.com/ernestwong/sudokusolver}{http://github.com/ernestwong/sudokusolver}}
+\begin{tightemize}\itemsep0.2em
+\item Android application which takes picture of Sudoku puzzle and provides solution.
+\item Uses OpenCV computer vision library and image processing to identify puzzle and Tesseract OCR to
+identify numbers.
+\item Customized image processing algorithms—used a combination of OpenCV functions and custom
+  algorithms.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Connectd}
+\descript{| Connect all social media with one click }
+\location{\href{http://github.com/ernestwong/connectd}{http://github.com/ernestwong/connectd}}
+\begin{tightemize}\itemsep0.2em
+\item Ruby on Rails mobile web application that allows user to search for other users and send invitations on all social media platforms with a single button
+\item Used social media API services (Facebook, Twitter, G+, LinkedIn) to send invitations to users
+\end{tightemize}
+\sectionsep
+
+\runsubsection{MuseDreams}
+\descript{| An IoT hack with Muse headband }
+\location{\href{http://github.com/ernestwong/musedreams}{http://github.com/ernestwong/musedreams}}
+\begin{tightemize}\itemsep0.2em
+\item Hardware hack using Muse headband that detects when user is about to fall asleep and makes adjustments to external surroundings
+\item Analyzed EEG data and developed algorithm that recognizes user's sleepiness using state machine
+\item Python server which interprets EEG data and posts state to Rails API for Android application
+\end{tightemize}
+\sectionsep
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
