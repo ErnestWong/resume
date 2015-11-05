@@ -28,6 +28,8 @@
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
 
+
+\definecolor{customgrey}{HTML}{8c9398}
 % Set main fonts
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[Color=primary]{Helvetica Light}
@@ -54,8 +56,8 @@ Last Updated on
 	\vspace{5pt}
 	\centering{
 		\sffamily
-		\fontspec{Helvetica Neue UltraLight}\fontsize{60pt}{10cm}\selectfont #1
-		\fontspec{Helvetica Neue Light}\selectfont #2
+		\fontspec{Helvetica Neue Light}\fontsize{60pt}{10cm}\selectfont #1
+        \fontspec{Helvetica Neue UltraLight}\color{customgrey}\selectfont #2
 	} \\
 	\vspace{10pt}
 	\centering{ \color{headings}\fontspec{Heiti TC Medium}\fontsize{11pt}{14pt}\selectfont #3}
