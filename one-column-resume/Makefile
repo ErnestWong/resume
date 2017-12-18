@@ -6,3 +6,7 @@ makeresume:
 clean:
 	@rm -f *.log *.aux *.out
 	@echo "Cleaned xelatex logs."
+
+coverletter:
+	@cd coverletter; xelatex coverletter.tex && open coverletter.pdf
+	@echo "compiled resume"
